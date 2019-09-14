@@ -21,7 +21,7 @@ library(wordcloud2)
 library(processx)
 
 # Import data
-data <- read.csv("Video_Games_Sales_as_at_22_Dec_2016.csv", header = TRUE, stringsAsFactors = FALSE)
+data <- read.csv("Video_Game_Sales.csv", header = TRUE, stringsAsFactors = FALSE)
 vg <- data
 
 # View information on the data

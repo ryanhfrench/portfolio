@@ -1,20 +1,14 @@
-# Data Science Portfolio
-## A collection of my favorite Data Science related projects.
+# Analyzing The Gaming Industry Over Time
+## Utilizing R & Adobe Illustrator
 
-# Spotify Top 200 Daily Tracks & Features Analysis
-## Utilizing Python, SQL, & Tableau
-Probably my most used app on a daily basis, my Spotify is almost always open whether it be me creating playlists to share with my friends, listening to a podcast on the way to class, or enjoying my Discover Weekly while I code. Due to its position as one of the largest streaming platforms in the world, I was interested to take a look at the daily updated Top 200 RSS Feed (which can be found at https://spotifycharts.com/regional/global/daily/) and see if I could create a database to house the data as well as a dashboard to effectively explore it.
-
-### Dashboard
-![Dashboard Image](/dashboard_image.png)
-
-[Interact with the Dashboard on Tableau Public](https://public.tableau.com/profile/ryan.french4207#!/vizhome/SpotifyTop200DailyTracksFeaturesAnalysis/SpotifyTop200DailyTracksFeaturesAnalysis)
+### Poster
+![Poster](/poster.pdf)
 
 ### Files  
-**data:** The folder housing the Spotify data that I collected in CSV format for each date.   
-**etl.py:** The python script that performs the Extract, Transform, and Load processes for this project. First, the script identifies the current date and parses it into the URL structure of the Spotify Top 200 RSS feed page in order to then scrape the data and save it in CSV format. Next, a call is made to the Spotify API in order to pull audio features (key, tempo, time signature, etc) for each track in the data set, adding these features for each track. Finally, a MySQL database is created and the CSV files in the *data*    folder are loaded. These steps are then repeated for each day in the last month from the current date (defined as 30 days)   
-**dashboard.twbx:** A Tableau dashboard which presents visual insights into the data which is pulled from the MySQL database.   
-**dashboard_image.png:** An image of the Tableau dashboard to provide an overview of the data.   
+**code.R:** The Script for importing, cleaning, and munging the data from *Video_Games_Sales_as_at_22_Dec_2016.csv* as well as building the visualizations programmatically.
+**Video_Games_Sales.csv:** Data on the video game industry sales for the last 30 years.
+**poster_project.ai:** The Adobe Illustrator project file for further processing of the visualizations generated in R.
+**poster.pdf:** The final completed poster from Adobe Illustrator.
 
 ### Attributes
 #### As represented in the MySQL database and Tableau dashboard, definitions provided by Spotify  
