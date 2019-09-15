@@ -17,7 +17,7 @@ As an avid gamer when I discovered the Video Game Sales dataset on Kaggle (https
 **poster_project.ai:** The Adobe Illustrator project file for further processing of the visualizations generated in R. </br>
 
 ### Attributes
-#### As represented in the MySQL database and Tableau dashboard, definitions provided by Spotify  
+#### Summarized from the Kaggle dataset page. 
 **Name:** Name of the game. *(string)* <br/>
 **Platform:** Console on which the game is runs. *(string)* <br/>    
 **Year_of_Release:** The year the game was released. *(int)* <br/>   
