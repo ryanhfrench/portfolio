@@ -15,7 +15,7 @@ setwd(dirname(current_path))
 path = getwd()
 
 # Set Mapbox token for Orca
-Sys.setenv("MAPBOX_TOKEN" = "pk.eyJ1IjoicnlhbmhmcmVuY2giLCJhIjoiY2p1MzNsN3M1MGo1ZjN5c2ExOHN5NnZ5YiJ9.5Aa00EONtlSvOC3haNZmSQ")
+Sys.setenv("MAPBOX_TOKEN" = "YOUR_MAPBOX_TOKEN_HERE")
 
 # Import data
 data <- read.csv("Video_Game_Sales.csv", header = TRUE, stringsAsFactors = FALSE)
