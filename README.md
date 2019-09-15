@@ -8,7 +8,7 @@
 Probably my most used app on a daily basis, my Spotify is almost always open whether it be me creating playlists to share with my friends, listening to a podcast on the way to class, or enjoying my Discover Weekly while I code. Due to its position as one of the largest streaming platforms in the world, I was interested to take a look at the daily updated Top 200 RSS Feed (which can be found at https://spotifycharts.com/regional/global/daily/) and see if I could create a database to house the data as well as a dashboard to effectively explore it.
 
 ### Dashboard
-![Dashboard Image](spotify_analytics_dashboard/dashboard_image.png)
+![Dashboard Image](https://github.com/ryanhfrench/spotify_dashboard/blob/master/dashboard_image.png)
 [Interact with the Dashboard on Tableau Public](https://public.tableau.com/profile/ryan.french4207#!/vizhome/SpotifyTop200DailyTracksFeaturesAnalysis/SpotifyTop200DailyTracksFeaturesAnalysis)
 
 ### Files  
@@ -52,7 +52,7 @@ Probably my most used app on a daily basis, my Spotify is almost always open whe
 As an avid gamer when I discovered the Video Game Sales dataset on Kaggle (https://www.kaggle.com/rush4ratio/video-game-sales-with-ratings) I was excited to see what different forms of visualizations I could create. In regards to the overall presentation, I wanted to embrace the culture of video games from a stylistic point of view and opted for a retro-themed color scheme and image style.
 
 ### Poster
-![Poster](digitizing_the_gaming_industry/poster_image.png)
+![Poster](https://github.com/ryanhfrench/portfolio/blob/master/digitizing_the_gaming_industry/poster_image.png)
 
 ### Files
 **resources:** The folder that holds the resources for the poster accents and the wordcloud. </br>
