@@ -1,15 +1,3 @@
-#
-# Ryan French
-# IST 719: Information Visualization - Final Project
-#
-
-# Set working directory
-setwd("/Users/Ryan/Dropbox/college/8_Semester_VI/IST_719/final_project")
-#setwd("\\Users\\ryanf\\Dropbox\\College\\8_Semester_VI\\IST_719\\final_project")
-
-# Set Mapbox token for Orca
-Sys.setenv("MAPBOX_TOKEN" = "pk.eyJ1IjoicnlhbmhmcmVuY2giLCJhIjoiY2p1MzNsN3M1MGo1ZjN5c2ExOHN5NnZ5YiJ9.5Aa00EONtlSvOC3haNZmSQ")
-
 # Import packages
 library(viridis)
 library(dplyr)
@@ -19,6 +7,15 @@ library(treemapify)
 library(tm)
 library(wordcloud2)
 library(processx)
+library(rstudioapi)
+
+# Get working directory
+current_path = rstudioapi::getActiveDocumentContext()$path 
+setwd(dirname(current_path))
+path = getwd()
+
+# Set Mapbox token for Orca
+Sys.setenv("MAPBOX_TOKEN" = "pk.eyJ1IjoicnlhbmhmcmVuY2giLCJhIjoiY2p1MzNsN3M1MGo1ZjN5c2ExOHN5NnZ5YiJ9.5Aa00EONtlSvOC3haNZmSQ")
 
 # Import data
 data <- read.csv("Video_Game_Sales.csv", header = TRUE, stringsAsFactors = FALSE)
@@ -35,7 +32,7 @@ vg$User_Score <- as.numeric(as.character(vg$User_Score))
 # Get columns with NA values
 colnames(vg)[colSums(is.na(vg)) > 0]
 
-# Only look at data up until 2017 (when this data was last updated)
+# Only look at data up until 2017 (when this data was last updated, there are some outliers)
 vg <- vg[vg$Year_of_Release <= 2017, ]
 
 # Fill empty Genre, Developer, and Rating data with "Unknown"
@@ -66,7 +63,7 @@ market_plot_last <- cc_last %>%
          yaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE))
 market_plot_last
 # Export plot using orca
-#orca(market_plot_last, "donut_last_gen.pdf")
+orca(market_plot_last, "/visualizations/donut_last_gen.pdf")
 
 
 
@@ -80,7 +77,7 @@ market_plot_current <- cc_current %>%
          yaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE))
 market_plot_current
 # Export plot using orca
-#orca(market_plot_current, "donut_cur_gen.pdf")
+orca(market_plot_current, "/visualizations/donut_cur_gen.pdf")
 
 
 
@@ -92,7 +89,7 @@ corr_sales <- ggcorr(cor, nbreaks = 8, low = colors[2], mid = colors[2], high = 
        label_color = "white")
 corr_sales
 # Export plot using orca
-#orca(corr_sales, "corr_sales.pdf")
+orca(corr_sales, "/visualizations/corr_sales.pdf")
 
 
 
@@ -144,7 +141,7 @@ time_series_brands <- ggplot(ts, aes(x = Year_of_Release, y = count, group = bra
   labs(title = "Releases by Platform over Time")
 time_series_brands
 # Export plot using orca
-#orca(time_series_brands, "ts_brands.pdf")
+orca(time_series_brands, "/visualizations/ts_brands.pdf")
 
 
 
@@ -160,7 +157,7 @@ time_series_genre <- ggplot(ts, aes(x = Year_of_Release, y = count, group = Genr
   labs(title = "Releases by Genre over Time")
 time_series_genre
 # Export plot using orca
-#orca(time_series_genre, "ts_genre.pdf")
+orca(time_series_genre, "/visualizations/ts_genre.pdf")
 
 
 
@@ -176,7 +173,7 @@ time_series_rating <- ggplot(ts, aes(x = Year_of_Release, y = count, group = Rat
   labs(title = "Releases by Rating over Time")
 time_series_rating
 # Export plot using orca
-#orca(time_series_genre, "ts_rating.pdf")
+orca(time_series_genre, "/visualizations/ts_rating.pdf")
 
 
 
@@ -204,7 +201,7 @@ boxplot_score <- ggplot(bp, aes(genre, score, fill = label)) + geom_boxplot(size
 boxplot_score <- boxplot_score + scale_fill_manual(values=c(colors[3], colors[5]))
 boxplot_score
 # Export plot using orca
-#orca(boxplot_score, "boxplot_critic_vs_user.pdf")
+orca(boxplot_score, "/visualizations/boxplot_critic_vs_user.pdf")
 
 
 
@@ -230,6 +227,7 @@ v <- sort(rowSums(m), decreasing = TRUE)
 title_frequencies <- data.frame(word = names(v),freq = v)
 
 # Create cloud
-png("word_cloud.png", units = "in", width = 10, height = 10, res = 300)
-wordcloud2(title_frequencies, figPath = "controller.png", size = 1.5, color = colors[4])
+fig_path = paste(path, "/resources/controller.png", sep="")
+png("/visualizations/word_cloud.png", units = "in", width = 10, height = 10, res = 300)
+wordcloud2(title_frequencies, figPath = fig_path, size = 1.5, color = colors[4])
 dev.off()
