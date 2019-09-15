@@ -11,8 +11,8 @@ Probably my most used app on a daily basis, my Spotify is almost always open whe
 ### Files  
 **data:** The folder housing the Spotify data that I collected in CSV format for each date. </br>
 **extracts:** The folder housing the extract of the SQL data in order to allow anyone to explore the Tableau dashboard. </br>
-**dashboard_image.png:** An image of the Tableau dashboard to provide an overview of the data. </br>    
 **dashboard.twbx:** A Tableau dashboard which presents visual insights into the data which is pulled from the MySQL database. </br>   
+**dashboard_image.png:** An image of the Tableau dashboard to provide an overview of the data for GitHub display. </br>    
 **etl.py:** The python script that performs the Extract, Transform, and Load processes for this project. First, the script identifies the current date and parses it into the URL structure of the Spotify Top 200 RSS feed page in order to then scrape the data and save it in CSV format. Next, a call is made to the Spotify API in order to pull audio features (key, tempo, time signature, etc) for each track in the data set, adding these features for each track. Finally, a MySQL database is created and the CSV files in the *data*    folder are loaded. These steps are then repeated for each day in the last month from the current date (defined as 30 days). </br>
 
 ### Attributes
