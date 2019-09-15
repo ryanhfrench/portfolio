@@ -16,8 +16,10 @@ library(leaflet)
 library(leaflet.extras)
 library(randomForestExplainer)
 
-# Set working directory
-setwd("/Users/Ryan/Dropbox/college/7_Semester_V/honors_capstone/visualizing_and_understanding_crime_in_syracuse")
+# Get working directory
+current_path = rstudioapi::getActiveDocumentContext()$path 
+setwd(dirname(current_path))
+path = getwd()
 
 # Import crime data
 crimeData <- read.csv(file="Weekly_Crime_Offenses_2017.csv", 
