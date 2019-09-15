@@ -6,7 +6,6 @@ Probably my most used app on a daily basis, my Spotify is almost always open whe
 
 ### Dashboard
 ![Dashboard Image](dashboard_image.png)
-<img src="dashboard_image.png">
 [Interact with the Dashboard on Tableau Public](https://public.tableau.com/profile/ryan.french4207#!/vizhome/SpotifyTop200DailyTracksFeaturesAnalysis/SpotifyTop200DailyTracksFeaturesAnalysis)
 
 ### Files  
