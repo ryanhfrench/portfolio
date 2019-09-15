@@ -5,15 +5,15 @@
 As an avid gamer when I discovered the Video Game Sales dataset on Kaggle (https://www.kaggle.com/rush4ratio/video-game-sales-with-ratings) I was excited to see what different forms of visualizations I could create. In regards to the overall presentation, I wanted to embrace the culture of video games from a stylistic point of view and opted for a retro-themed color scheme and image style.
 
 ### Poster
-![Poster](/poster.pdf)
+![Poster](poster.pdf)
 
 ### Files
-**code.R:** The Script for importing, cleaning, and munging the data from <br/> *Video_Games_Sales_as_at_22_Dec_2016.csv* as well as building the visualizations programmatically. <br/>
-**poster_project.ai:** The Adobe Illustrator project file for further processing of the visualizations generated in R. <br/>
-**poster.pdf:** The final completed poster from Adobe Illustrator. <br/>
-**resources:** The folder that holds the resources for the poster accents and the wordcloud. <br/>
+**code.R:** The Script for importing, cleaning, and munging the data from </br> *Video_Games_Sales_as_at_22_Dec_2016.csv* as well as building the visualizations programmatically. </br>
+**poster_project.ai:** The Adobe Illustrator project file for further processing of the visualizations generated in R. </br>
+**poster.pdf:** The final completed poster from Adobe Illustrator. </br>
+**resources:** The folder that holds the resources for the poster accents and the wordcloud. </br>
 **Video_Games_Sales.csv:** Data on the video game industry sales for the last 30 years.
-**visualizations:** The folder that holds the visualization outputs from the R script. <br/>
+**visualizations:** The folder that holds the visualization outputs from the R script. </br>
 
 ### Attributes
 #### As represented in the MySQL database and Tableau dashboard, definitions provided by Spotify  
