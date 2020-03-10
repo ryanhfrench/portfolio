@@ -1,6 +1,8 @@
 # Analyzing Key Indicators of Positive Reviews for iOS Apps
 ## Utilizing Python
 
+![Feature Importances](https://github.com/ryanhfrench/portfolio/blob/master/analyzing_key_indicators_of_high_app_reviews/feature_importances.png
+
 ### Summary
 My final project for Scripting for Data Analysis, I was interested to get a better understanding how easy readily one can predict which apps on the Apple iOS app store will be successful from a reviews standpoint as well as what the most important features are when it comes to indicating such success.
 
